@@ -77,10 +77,11 @@ header p{
         transform: rotateY(0); 
     }
 
-    .card-back{
-        background: url(images/card-back.png);
-        justify-content: center;
-        transform: rotateY(-180deg);
+    .card-back {
+      background: url(images/card-back.png);
+      justify-content: center;
+      transform: rotateY(-180deg);
+      align-items: end;
     }
 
     /* .card:hover .card-back {
@@ -96,6 +97,10 @@ header p{
       
       .reveal .card-front {
         transform: rotateY(180deg); 
+      }
+
+      .face-image{
+        height: 90%;
       }
 
     /*=================================================*/
