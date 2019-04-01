@@ -1,123 +1,123 @@
-body{
-    margin: 0;
-padding: 0;
-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-  sans-serif;
--webkit-font-smoothing: antialiased;
--moz-osx-font-smoothing: grayscale;
-text-align: center;
-background-color: #ffcfdf;
-background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
-min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  background-color: #ffcfdf;
+  background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+  min-height: 100vh;
 
 }
+
 *,
 *::after,
 *::before {
-margin: 0;
-padding: 0;
-box-sizing: content-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
 }
-header{
-margin: 2rem 0;
+
+header {
+  margin: 2rem 0;
 }
+
 header h1 {
-	font-family: 'Gruppo', cursive;
-	margin-bottom: 2rem;
-	font-size: 4rem;
-}
-header p{
-	width: 35rem;
-	margin: auto;
-}
-.variable-container{
-	display: flex;
-	width: 30rem;
-	margin: auto;
-	justify-content: space-around;
-    margin-top: 2rem;
-    font-family: 'Gruppo', cursive;
-    font-size: 1.5rem;
+  font-family: 'Gruppo', cursive;
+  margin-bottom: 2rem;
+  font-size: 4rem;
 }
 
-.memory-game{
-	height: 55rem;
-	width: 55rem;
-	margin: auto;
-	margin-bottom: 10rem;
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-template-rows: repeat(4,1fr);
+header p {
+  width: 35rem;
+  margin: auto;
 }
-    .card {
-        margin: 1rem;
-        border-radius: 0.2rem;
-        position: relative;
-        overflow: hidden;
-        perspective: 150rem;
-        -moz-perspective: 150rem;
-        background: none;
-        border: none;
-    }
 
-    .card-side{
-        position: absolute;
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.56);
-        transition: transform 500ms ease-in-out;
-        backface-visibility: hidden;
-    }
-    .card-front {
-        background: url(images/card-front.png);
-        justify-content: center;
-        transform: rotateY(0); 
-    }
+.variable-container {
+  display: flex;
+  width: 30rem;
+  margin: auto;
+  justify-content: space-around;
+  margin-top: 2rem;
+  font-family: 'Gruppo', cursive;
+  font-size: 1.5rem;
+}
 
-    .card-back {
-      background: url(images/card-back.png);
-      justify-content: center;
-      transform: rotateY(-180deg);
-      align-items: end;
-    }
+.memory-game {
+  height: 55rem;
+  width: 55rem;
+  margin: auto;
+  margin-bottom: 10rem;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+}
 
-    /* .card:hover .card-back {
-        transform: rotateY(0); 
-      }
-      
-      .card:hover .card-front {
-        transform: rotateY(180deg); 
-      } */
-      .reveal .card-back {
-        transform: rotateY(0); 
-      }
-      
-      .reveal .card-front {
-        transform: rotateY(180deg); 
-      }
+.card {
+  margin: 1rem;
+  border-radius: 0.2rem;
+  position: relative;
+  overflow: hidden;
+  perspective: 150rem;
+  -moz-perspective: 150rem;
+  background: none;
+  border: none;
+}
 
-      .face-image{
-        height: 90%;
-      }
+.card-side {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.56);
+  transition: transform 500ms ease-in-out;
+  backface-visibility: hidden;
+}
 
-      .handle-button {
-        padding: 1rem;
-        margin: 1rem;
-        position: relative;
-      }
-      #end-message {
-        position: fixed;
-        top: 0;
-        left: 0;
-        background: #000000ba;
-        height: 100vh;
-        width: 100vw;
-        color: white;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        display: none;
-      }
+.card-front {
+  background: url(images/card-front.png);
+  justify-content: center;
+  transform: rotateY(0);
+}
+
+.card-back {
+  background: url(images/card-back.png);
+  justify-content: center;
+  transform: rotateY(-180deg);
+  align-items: end;
+}
+.reveal .card-back {
+  transform: rotateY(0);
+}
+
+.reveal .card-front {
+  transform: rotateY(180deg);
+}
+
+.face-image {
+  height: 90%;
+}
+
+.handle-button {
+  padding: 1rem;
+  margin: 1rem;
+  position: relative;
+}
+
+#end-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000000ba;
+  height: 100vh;
+  width: 100vw;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
