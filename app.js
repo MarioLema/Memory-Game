@@ -79,7 +79,7 @@ const MODIFIER = {
     turn() {
 
         if (!DATA.gameOngoing) VIEW.alertStart(); //if game has not started when clicking on cards prompt alert
-        let id = this.correctTarget(event); 
+        let id = this.correctTarget(event);
         if (id && DATA.gameOngoing && !DATA.busy) { //accepts the click if the target id is correct, the game has started and there is no animation running
             DATA.currPair.push(Number(id));
             VIEW.revealCard(id);
@@ -88,7 +88,7 @@ const MODIFIER = {
 
             if (DATA.currPair.length > 1) { //if this is the second card turned
                 DATA.moves++;
-                VIEW.displayTurns(); 
+                VIEW.displayTurns();
                 if (this.checkMatch()) { //if there is a match check if it is enough to win or just add to the pairs solved
                     DATA.pairsSolved++;
                     if (this.checkWin()) {
@@ -96,7 +96,7 @@ const MODIFIER = {
                         clearInterval(DATA.interval);
                     };
                     DATA.currPair = [];
-                } else {    //if there is no match hide cards and reset currPair array
+                } else { //if there is no match hide cards and reset currPair array
                     setTimeout(() => {
                         VIEW.hideCard([DATA.currPair[0]]);
                         VIEW.hideCard([DATA.currPair[1]]);
@@ -116,7 +116,7 @@ const MODIFIER = {
             for (let i = 0; i < DATA.matchTable.length; i++) {
                 VIEW.addFace(DATA.matchTable[i].positions, DATA.matchTable[i].faceId);
             }
-            
+
             this.revealAll();
         }
     },
